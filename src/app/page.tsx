@@ -1,112 +1,256 @@
 import Image from "next/image";
+import CheatSheetSection from '@/app/cheat-sheet-section';
+
+const content = [
+  {
+    title: "Flexbox",
+    subItems: [
+      {
+        subItemTitle: "Container",
+        data: [
+          {
+            class: 'flex',
+            description: 'sets the container as a flex container'
+          },
+          {
+            class: 'inline-flex',
+            description: 'sets the container as an inline flex container'
+          },
+          {
+            class: 'flex-row',
+            description: 'sets the main axis as horizontal'
+          },
+          {
+            class: 'flex-col',
+            description: 'sets the main axis as vertical'
+          },
+          {
+            class: 'flex-wrap',
+            description: 'allows the items to wrap if they exceed the container width'
+          },
+          {
+            class: 'flex-nowrap',
+            description: 'prevents the items from wrapping'
+          }
+        ]
+      },
+      {
+        subItemTitle: "Justify Content",
+        data: [
+          {
+            class: 'justify-start',
+            description: 'aligns the items to the start of the container'
+          },
+          {
+            class: 'justify-center',
+            description: 'aligns the items to the center of the container'
+          },
+          {
+            class: 'justify-end',
+            description: 'aligns the items to the end of the container'
+          },
+          {
+            class: 'justify-between',
+            description: 'aligns the items with equal space between them'
+          },
+          {
+            class: 'justify-around',
+            description: 'aligns the items with equal space around them'
+          }
+        ]
+      },
+      {
+        subItemTitle: "Align Items",
+        data: [
+          {
+            class: 'items-start',
+            description: 'aligns the items to the start of the container'
+          },
+          {
+            class: 'items-center',
+            description: 'aligns the items to the center of the container'
+          },
+          {
+            class: 'items-end',
+            description: 'aligns the items to the end of the container'
+          },
+          {
+            class: 'items-baseline',
+            description: 'aligns the items to the baseline of the container'
+          },
+          {
+            class: 'items-stretch',
+            description: 'stretches the items to fill the container'
+          }
+        ]
+      },
+      {
+        subItemTitle: "Align Content",
+        data: [
+          {
+            class: 'content-start',
+            description: 'aligns the lines to the start of the container'
+          },
+          {
+            class: 'content-center',
+            description: 'aligns the lines to the center of the container'
+          },
+          {
+            class: 'content-end',
+            description: 'aligns the lines to the end of the container'
+          },
+          {
+            class: 'content-between',
+            description: 'aligns the lines with equal space between them'
+          },
+          {
+            class: 'content-around',
+            description: 'aligns the lines with equal space around them'
+          },
+          {
+            class: 'content-stretch',
+            description: 'stretches the lines to fill the container'
+          }
+        ]
+      },
+      {
+        subItemTitle: "Flex Items",
+        data: [
+          {
+            class: 'flex-grow',
+            description: 'allows the item to grow to fill the container'
+          },
+          {
+            class: 'flex-shrink',
+            description: 'allows the item to shrink to fit the container'
+          },
+          {
+            class: 'flex-basis',
+            description: 'sets the initial size of the item'
+          },
+          {
+            class: 'order',
+            description: 'sets the order of the item in the container'
+          },
+          {
+            class: 'align-self',
+            description: 'overrides the align-items value for the item'
+          }
+        ]
+      },
+    ]
+  },
+  {
+    title: "Typography",
+    subItems: [
+      {
+        subItemTitle: "Font Size",
+        data: [
+          {
+            class: 'text-xs',
+            description: 'font size: 0.75rem (12px)'
+          },
+          {
+            class: 'text-sm',
+            description: 'font size: 0.875rem (14px)'
+          },
+          {
+            class: 'text-base',
+            description: 'font size: 1rem (16px)'
+          },
+          {
+            class: 'text-lg',
+            description: 'font size: 1.125rem (18px)'
+          },
+          {
+            class: 'text-xl',
+            description: 'font size: 1.25rem (20px)'
+          },
+          {
+            class: 'text-2xl',
+            description: 'font size: 1.5rem (24px)'
+          },
+          {
+            class: 'text-3xl',
+            description: 'font size: 1.875rem (30px)'
+          },
+          {
+            class: 'text-4xl',
+            description: 'font size: 2.25rem (36px)'
+          },
+          {
+            class: 'text-5xl',
+            description: 'font size: 3rem (48px)'
+          },
+          {
+            class: 'text-6xl',
+            description: 'font size: 3.75rem (60px)'
+          },
+          {
+            class: 'text-7xl',
+            description: 'font size: 4.5rem (72px)'
+          },
+          {
+            class: 'text-8xl',
+            description: 'font size: 6rem (96px)'
+          },
+          {
+            class: 'text-9xl',
+            description: 'font size: 8rem (128px)'
+          }
+
+        ]
+      },
+      {
+        subItemTitle: "Font Weight",
+        data: [
+          {
+            class: 'font-thin',
+            description: 'font weight: 100'
+          },
+          {
+            class: 'font-extralight',
+            description: 'font weight: 200'
+          },
+          {
+            class: 'font-light',
+            description: 'font weight: 300'
+          },
+          {
+            class: 'font-normal',
+            description: 'font weight: 400'
+          },
+          {
+            class: 'font-medium',
+            description: 'font weight: 500'
+          },
+          {
+            class: 'font-semibold',
+            description: 'font weight: 600'
+          },
+          {
+            class: 'font-bold',
+            description: 'font weight: 700'
+          },
+          {
+            class: 'font-extrabold',
+            description: 'font weight: 800'
+          },
+          {
+            class: 'font-black',
+            description: 'font weight: 900'
+          }
+        ]
+      }
+      ]
+  }
+  ]
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <CheatSheetSection sectionContent={content}/>
       </div>
     </main>
   );
