@@ -17,7 +17,7 @@ const CheatSheetSection = ({ sectionContent }:CheatSheetSectionProps) => {
                   {subItem.data.map((data:any, index:number) => (
                     <div key={index}>
                       <p className="font-mono text-sm">
-                        <span className="text-gray-500">{data.class}</span> - {data.description}
+                        <span className="text-green-800">{data.class}</span> - <span className="text-gray-500">{data.description}</span>
                       </p>
                     </div>
                   ))}
