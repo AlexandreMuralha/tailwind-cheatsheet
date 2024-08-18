@@ -1,4 +1,3 @@
-import Image from "next/image";
 import CheatSheetSection from '@/app/cheat-sheet-section';
 
 const content = [
@@ -159,7 +158,7 @@ const content = [
             description: 'font size: 1rem (16px)'
           },
           {
-            class: 'text-lg',
+            class: <span className="font-extrabold">text-lg</span>,
             description: 'font size: 1.125rem (18px)'
           },
           {
