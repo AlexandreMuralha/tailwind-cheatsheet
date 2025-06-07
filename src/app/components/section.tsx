@@ -1,5 +1,6 @@
 "use client"
-import SectionContent from '@/app/models/section.model';
+
+import { SectionContent } from '@/app/models/section.model';
 import { useState } from 'react';
 
 interface CheatSheetSectionProps {
@@ -7,18 +8,18 @@ interface CheatSheetSectionProps {
 }
 
 const MainContent = ({ sectionContent }:CheatSheetSectionProps) => {
-
   const [ openSection, setOpenSection ] = useState(true);
   const handleClickOnSection = () => setOpenSection(!openSection);
 
   return (
-    <div className="flex gap-3 mb-8">
-      <section className=" rounded-lg bg-gray-200 p-4 mb-8" >
+    <div className="flex flex-col">
+      <section className="rounded-lg bg-gray-200 p-4">
         <h2 className="text-2xl font-bold cursor-pointer" onClick={handleClickOnSection}>{sectionContent.title}</h2>
-          {openSection && <div>
+        {openSection && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {sectionContent.subItems.map((subItem, idx) => (
-              <div key={idx} className="mb-4">
-                <h3 className="text-lg font-bold mb-2 mt-4">{subItem.subItemTitle}</h3>
+              <div key={idx} className="">
+                <h3 className="text-lg font-bold mb-2">{subItem.subItemTitle}</h3>
                 <div>
                   {subItem.data.map((data, idx) => (
                     <div key={idx}>
@@ -30,9 +31,9 @@ const MainContent = ({ sectionContent }:CheatSheetSectionProps) => {
                   ))}
                 </div>
               </div>
-            ))
-            }
-          </div>}
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );

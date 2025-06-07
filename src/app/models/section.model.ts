@@ -1,8 +1,14 @@
 import { ReactNode } from 'react';
 
-export default interface SectionContent {
+export interface SectionContent {
   title: string;
-  subItems: SubItem[];
+  subItems: {
+    subItemTitle: string;
+    data: {
+      class: string | JSX.Element;
+      description: string;
+    }[];
+  }[];
 }
 
 interface SubItem {
