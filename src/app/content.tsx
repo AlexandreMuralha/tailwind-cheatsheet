@@ -237,6 +237,67 @@ const typography = {
           description: 'font weight: 900'
         }
       ]
+    },
+    {
+      subItemTitle: "Line Height",
+      data: [
+        {
+          class: 'leading-none',
+          description: 'line-height: 1'
+        },
+        {
+          class: 'leading-tight',
+          description: 'line-height: 1.25'
+        },
+        {
+          class: 'leading-snug',
+          description: 'line-height: 1.375'
+        },
+        {
+          class: 'leading-normal',
+          description: 'line-height: 1.5'
+        },
+        {
+          class: 'leading-relaxed',
+          description: 'line-height: 1.625'
+        },
+        {
+          class: 'leading-loose',
+          description: 'line-height: 2'
+        },
+        {
+          class: 'leading-3',
+          description: 'line-height: 0.75rem (12px)'
+        },
+        {
+          class: 'leading-4',
+          description: 'line-height: 1rem (16px)'
+        },
+        {
+          class: 'leading-5',
+          description: 'line-height: 1.25rem (20px)'
+        },
+        {
+          class: 'leading-6',
+          description: 'line-height: 1.5rem (24px)'
+        },
+        {
+          class: 'leading-7',
+          description: 'line-height: 1.75rem (28px)'
+        },
+        {
+          class: 'leading-8',
+          description: 'line-height: 2rem (32px)'
+        },
+        {
+          class: 'leading-9',
+          description: 'line-height: 2.25rem (36px)'
+        },
+        {
+          class: 'leading-10',
+          description: 'line-height: 2.5rem (40px)'
+        }
+      ]
     }
   ]
 };
