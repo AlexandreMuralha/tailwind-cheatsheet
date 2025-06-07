@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface SectionData {
   class: string;
   description: string;
