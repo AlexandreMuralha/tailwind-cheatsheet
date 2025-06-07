@@ -9,10 +9,13 @@ interface CheatSheetSectionProps {
 
 const MainContent = ({ sectionContent }:CheatSheetSectionProps) => {
 
+ //masonry-like layout with columns items flow naturally into columns
+ //break-inside-avoid to avoid breaking inside the element
+
   return (
-    <div className="flex gap-3 mb-8">
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-4">
       {sectionContent.map(( section:SectionContent, idx ) => (
-        <div key={idx}>
+        <div key={idx} className="break-inside-avoid mb-3">
           <Section sectionContent={section} />
         </div>
       ))}
