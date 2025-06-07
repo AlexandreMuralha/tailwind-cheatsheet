@@ -7,7 +7,7 @@ interface CheatSheetSectionProps {
   sectionContent: SectionContent[];
 }
 
-const MainContent = ({ sectionContent }:CheatSheetSectionProps) => {
+const Main= ({ sectionContent }:CheatSheetSectionProps) => {
   return (
     <div className="flex flex-col gap-6">
       {sectionContent.map(( section:SectionContent, idx ) => (
@@ -19,4 +19,4 @@ const MainContent = ({ sectionContent }:CheatSheetSectionProps) => {
   );
 }
 
-export default MainContent;
+export default Main;
