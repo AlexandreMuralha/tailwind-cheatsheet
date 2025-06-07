@@ -11,11 +11,9 @@ import {
 } from "@/app/components/ui/tooltip"
 import { motion, AnimatePresence } from "framer-motion"
 
-interface CheatSheetSectionProps {
+export default function Section({ sectionContent } : {
   sectionContent: SectionContent;
-}
-
-const Section = ({ sectionContent }:CheatSheetSectionProps) => {
+}) {
   const [ openSection, setOpenSection ] = useState(true);
   const handleClickOnSection = () => setOpenSection(!openSection);
 
@@ -75,5 +73,3 @@ const Section = ({ sectionContent }:CheatSheetSectionProps) => {
     </div>
   );
 }
-
-export default Section;

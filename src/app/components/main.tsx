@@ -3,11 +3,9 @@
 import Section from '@/app/components/section';
 import { SectionContent } from '@/app/models/section.model';
 
-interface CheatSheetSectionProps {
+export default function Main({ sectionContent }: {
   sectionContent: SectionContent[];
-}
-
-const Main= ({ sectionContent }:CheatSheetSectionProps) => {
+}) {
   return (
     <div className="flex flex-col gap-6">
       {sectionContent.map(( section:SectionContent, idx ) => (
@@ -18,5 +16,3 @@ const Main= ({ sectionContent }:CheatSheetSectionProps) => {
     </div>
   );
 }
-
-export default Main;
