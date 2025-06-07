@@ -1,22 +1,18 @@
 import { ReactNode } from 'react';
 
+export interface SectionData {
+  class: string;
+  description: string;
+  highlighted?: boolean;
+}
+
+export interface SubItem {
+  subItemTitle: string;
+  data: SectionData[];
+  tooltipInfo?: string;
+}
+
 export interface SectionContent {
   title: string;
-  subItems: {
-    subItemTitle: string;
-    data: {
-      class: string | JSX.Element;
-      description: string;
-    }[];
-  }[];
-}
-
-interface SubItem {
-  subItemTitle: string;
-  data: Data[];
-}
-
-interface Data {
-  class: ReactNode;
-  description: ReactNode;
+  subItems: SubItem[];
 }

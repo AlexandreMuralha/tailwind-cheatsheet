@@ -32,6 +32,7 @@ const flexbox = {
     },
     {
       subItemTitle: "Justify Content",
+      tooltipInfo: "The justify-content utilities control the alignment of items along the main axis (horizontal axis in flexbox by default).",
       data: [
         {
           class: 'justify-start',
@@ -153,15 +154,18 @@ const typography = {
         },
         {
           class: 'text-base',
-          description: 'font size: 1rem (16px)'
+          description: 'font size: 1rem (16px)',
+          highlighted: true
         },
         {
-          class: <span className="font-extrabold">text-lg</span>,
-          description: 'font size: 1.125rem (18px)'
+          class: 'text-lg',
+          description: 'font size: 1.125rem (18px)',
+          highlighted: true
         },
         {
           class: 'text-xl',
-          description: 'font size: 1.25rem (20px)'
+          description: 'font size: 1.25rem (20px)',
+          highlighted: true
         },
         {
           class: 'text-2xl',
