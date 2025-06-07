@@ -24,12 +24,12 @@ export default function Section({
         </h2>
         <ExpandAnimation openSection={openSection}>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-            {sectionContent.subItems.map((subItem, idx) => (
+            {sectionContent.subsections.map((subsection, idx) => (
               <SubSection
                 key={idx}
-                subItemTitle={subItem.subItemTitle}
-                tooltipInfo={subItem.tooltipInfo}
-                data={subItem.data}
+                subsectionTitle={subsection.subsectionTitle}
+                tooltipInfo={subsection.tooltipInfo}
+                data={subsection.data}
               />
             ))}
           </div>

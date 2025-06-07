@@ -9,14 +9,17 @@ import {
 } from '@/app/components/ui/tooltip';
 
 interface SubSectionTitleProps {
-  subItemTitle: string;
+  subsectionTitle: string;
   tooltipInfo?: string;
 }
 
-function SubSectionTitle({ subItemTitle, tooltipInfo }: SubSectionTitleProps) {
+function SubSectionTitle({
+  subsectionTitle,
+  tooltipInfo,
+}: SubSectionTitleProps) {
   return (
     <h3 className="flex flex-row text-lg font-bold gap-2 items-center mb-2">
-      <span>{subItemTitle}</span>
+      <span>{subsectionTitle}</span>
       {tooltipInfo && (
         <TooltipProvider>
           <Tooltip>
@@ -62,7 +65,7 @@ function SubSectionItem({
 }
 
 interface SubSectionProps {
-  subItemTitle: string;
+  subsectionTitle: string;
   tooltipInfo?: string;
   data: Array<{
     class: string;
@@ -72,13 +75,16 @@ interface SubSectionProps {
 }
 
 export default function SubSection({
-  subItemTitle,
+  subsectionTitle,
   tooltipInfo,
   data,
 }: SubSectionProps) {
   return (
     <div>
-      <SubSectionTitle subItemTitle={subItemTitle} tooltipInfo={tooltipInfo} />
+      <SubSectionTitle
+        subsectionTitle={subsectionTitle}
+        tooltipInfo={tooltipInfo}
+      />
       <div>
         {data.map((item, idx) => (
           <SubSectionItem

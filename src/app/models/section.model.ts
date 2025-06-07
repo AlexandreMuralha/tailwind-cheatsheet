@@ -4,13 +4,13 @@ export interface SectionData {
   highlighted?: boolean;
 }
 
-export interface SubItem {
-  subItemTitle: string;
+export interface SubSection {
+  subsectionTitle: string;
   data: SectionData[];
   tooltipInfo?: string;
 }
 
 export interface SectionContent {
   title: string;
-  subItems: SubItem[];
+  subsections: SubSection[];
 }
