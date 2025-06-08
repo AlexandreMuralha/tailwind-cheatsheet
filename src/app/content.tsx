@@ -31,6 +31,12 @@ const flexbox = {
         },
       ],
     },
+  ],
+};
+
+const alignment = {
+  title: 'Alignment',
+  subsections: [
     {
       subsectionTitle: 'Justify Content',
       tooltipInfo:
@@ -322,7 +328,6 @@ const grid = {
           class: 'inline-grid',
           description: 'sets the container as an inline grid container',
         },
-
       ],
     },
   ],
@@ -628,4 +633,4 @@ const gapAndSpacing = {
   ],
 };
 
-export const content = [typography, flexbox, grid, gapAndSpacing];
+export const content = [typography, flexbox, grid, alignment, gapAndSpacing];
