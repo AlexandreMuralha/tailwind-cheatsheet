@@ -6,7 +6,7 @@ export default function GithubLink() {
       href="https://github.com/AlexandreMuralha/tailwind-cheatsheet"
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center gap-2 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors"
+      className="flex items-center gap-2  text-secondary-light text-secondary-dark hover-light hover-dark transition-colors"
     >
       <Github size={20} />
     </a>
