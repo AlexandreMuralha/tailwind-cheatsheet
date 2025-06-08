@@ -322,6 +322,7 @@ const grid = {
           class: 'inline-grid',
           description: 'sets the container as an inline grid container',
         },
+
       ],
     },
   ],
@@ -332,6 +333,8 @@ const gapAndSpacing = {
   subsections: [
     {
       subsectionTitle: 'Gap',
+      tooltipInfo:
+        'Control the space between items in a grid layout or a flex container when using, applies both vertically and horizontally.',
       data: [
         {
           class: 'gap-0',
@@ -477,6 +480,8 @@ const gapAndSpacing = {
     },
     {
       subsectionTitle: 'Spacing',
+      tooltipInfo:
+        'Controlling spacing between child elements, both in flexbox and grid layouts. Use space-x-{size} / space-y-{size}',
       data: [
         {
           class: 'space-x-0',
