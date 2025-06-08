@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Roboto' , system-ui sans-serif;
+  font-family: 'Roboto', system-ui sans-serif;
   /*color: rgb(var(--foreground-rgb));*/
   /*background: linear-gradient(*/
   /*    to bottom,*/
@@ -101,5 +101,48 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom colors */
+
+@layer components {
+  /* Background */
+  .bg-light {
+    @apply bg-white;
+  }
+  .bg-dark {
+    @apply bg-black;
+  }
+
+  .section-bg-light {
+    @apply bg-gray-200;
+  }
+  .section-bg-dark {
+    @apply dark:bg-gray-800;
+  }
+
+  /* Text */
+  .text-primary-light {
+    @apply text-gray-900;
+  }
+  .text-primary-dark {
+    @apply dark:text-gray-300;
+  }
+
+  /* Text secondary - used in description of classes */
+  .text-secondary-light {
+    @apply text-gray-400;
+  }
+  .text-secondary-dark {
+    @apply dark:text-gray-400;
+  }
+
+  /* Hover states */
+  .hover-light {
+    @apply hover:text-gray-900;
+  }
+  .hover-dark {
+    @apply dark:hover:text-gray-100;
   }
 }

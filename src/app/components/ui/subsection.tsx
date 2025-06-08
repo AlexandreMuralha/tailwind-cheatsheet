@@ -18,7 +18,7 @@ function SubSectionTitle({
   tooltipInfo,
 }: SubSectionTitleProps) {
   return (
-    <h3 className="flex flex-row text-lg font-bold gap-2 items-center mb-2">
+    <h3 className="flex flex-row text-lg font-bold gap-2 text-primary-light dark:text-primary-dark items-center mb-2">
       <span>{subsectionTitle}</span>
       {tooltipInfo && (
         <TooltipProvider>
@@ -26,7 +26,7 @@ function SubSectionTitle({
             <TooltipTrigger>
               <CircleAlert
                 size={14}
-                className="text-gray-500 hover:text-gray-700 transition-colors"
+                className="text-secondary-light dark:text-secondary-dark hover-light dark:hover-dark transition-colors cursor-default"
               />
             </TooltipTrigger>
             <TooltipContent>
@@ -54,11 +54,11 @@ function SubSectionItem({
     <div>
       <p className="font-mono text-sm leading-6">
         <span
-          className={`text-neutral-800 ${highlighted ? 'font-extrabold' : ''}`}
+          className={`text-primary-light dark:text-primary-dark ${highlighted ? 'font-extrabold' : ''}`}
         >
           {className}
         </span>{' '}
-        |<span className="text-gray-400 text-xs"> {description}</span>
+        |<span className="text-secondary-light dark:text-secondary-dark text-xs"> {description}</span>
       </p>
     </div>
   );

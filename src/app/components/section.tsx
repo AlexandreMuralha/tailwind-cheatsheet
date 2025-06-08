@@ -15,9 +15,9 @@ export default function Section({
 
   return (
     <div className="flex flex-col">
-      <section className="rounded-2xl bg-gray-200 p-5">
+      <section className="rounded-2xl p-5 section-bg-light dark:section-bg-dark">
         <h2
-          className="text-2xl font-bold cursor-pointer"
+          className="text-2xl font-bold cursor-pointer text-primary-light dark:text-primary-dark"
           onClick={handleClickOnSection}
         >
           {sectionContent.title}
