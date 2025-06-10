@@ -15,7 +15,14 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto', 'Sans-serif'],
+        sans: [
+          'Roboto',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'sans-serif',
+        ],
       },
       borderRadius: {
         lg: 'var(--radius)',
