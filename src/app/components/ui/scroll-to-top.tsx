@@ -30,14 +30,20 @@ export default function ScrollToTop() {
   };
 
   return (
-    <button
+    <div
       onClick={scrollToTop}
-      className={`z-50 fixed bottom-6 right-6 p-2 rounded-full bg-primary text-primary-foreground shadow-lg transition-all duration-1000 hover:bg-primary/90 ${
+      className={`z-50 fixed bottom-6 right-6 p-2 rounded-full bg-primary text-primary-foreground shadow-lg transition-all duration-1000 hover:bg-primary/90 cursor-pointer border-none ${
         isVisible ? 'translate-y-0 opacity-60' : 'translate-y-16 opacity-0'
       }`}
-      aria-label="Scroll to top"
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          scrollToTop();
+        }
+      }}
     >
       <ChevronsUp size={20} />
-    </button>
+    </div>
   );
 }
