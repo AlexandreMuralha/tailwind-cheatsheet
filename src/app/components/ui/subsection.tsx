@@ -54,11 +54,17 @@ function SubSectionItem({
     <div>
       <p className="font-mono text-sm leading-6">
         <span
-          className={`text-primary-light dark:text-primary-dark ${highlighted ? 'font-extrabold' : ''}`}
+          className={`text-primary-light dark:text-primary-dark ${
+            highlighted ? 'font-extrabold' : ''
+          }`}
         >
           {className}
         </span>{' '}
-        |<span className="text-secondary-light dark:text-secondary-dark text-xs"> {description}</span>
+        |
+        <span className="text-secondary-light dark:text-secondary-dark text-xs">
+          {' '}
+          {description}
+        </span>
       </p>
     </div>
   );
